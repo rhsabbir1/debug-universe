@@ -19,7 +19,7 @@ function generateTag(arr, interval) {
   }, interval);
 }
 
-generateTag(tagLines, 2000);
+generateTag(tagLines, 3000);
 
 document
   .getElementById("random-room-btn")
