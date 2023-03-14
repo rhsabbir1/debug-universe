@@ -15,7 +15,7 @@ function generateTag(arr, interval) {
   setInterval(() => {
     const randomIndex = Math.floor(Math.random() * arr.length);
     const randomTagLine = tagLines[randomIndex];
-    document.getElementById("taglines").innerText = randomTagLine;
+    document.getElementById("tagline").innerText = randomTagLine;
   }, interval);
 }
 
