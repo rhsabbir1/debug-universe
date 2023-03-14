@@ -1,5 +1,5 @@
 const addToCart = async (id) => {
-  console.log('cart')
+  // console.log('cart')
   const data = await fetch(`ROOMS.json`);
   const result = await data.json();
   const { name, summary, property_type, images,number_of_reviews,price,_id} = result.find((item) => item._id == id);
@@ -50,7 +50,7 @@ displayCartItems()
 
 const deleteItemFromCart=(id)=>{
     const cartItems=getItemsFromStorage()
-    const filteredItems=cartItems.filter((item)=>item._id==id)
+    const filteredItems=cartItems.filter((item)=>item._id != id)
     localStorage.setItem('savedCart', JSON.stringify(filteredItems))
     displayCartItems()
 }
